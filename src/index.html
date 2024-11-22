@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Despesas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Controle de Despesas</h1>
+
+    <!-- Filtro de Categoria -->
+    <div id="expense-filter">
+        <label for="category-filter">Filtrar por Categoria:</label>
+        <select id="category-filter">
+            <option value="all">Todas</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Saúde">Saúde</option>
+        </select>
+    </div>
+
+    <!-- Formulário para Adicionar Despesa -->
+    <form>
+        <select id="category">
+            <option value="Alimentação">Alimentação</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Saúde">Saúde</option>
+        </select>
+        <input id="description" placeholder="Descrição" required />
+        <input id="amount" type="number" placeholder="Valor" required />
+        <button type="submit">Adicionar Despesa</button>
+    </form>
+
+    <!-- Lista de Despesas -->
+    <div id="expense-list">
+        <h2>Lista de Despesas</h2>
+        <ul>
+            <!-- As despesas aparecem aqui -->
+        </ul>
+    </div>
+
+    <!-- Total de Despesas -->
+    <div id="summary">
+        <h2>Total:</h2>
+        <span id="total">R$ 0.00</span>
+    </div>
+
+    <script src="../dist/app.js"></script>
+</body>
+</html>
